@@ -1,0 +1,145 @@
+:root {
+  --back : #fff;
+  --button : #0f5038;
+  --bg: linear-gradient(85deg, #129c81, #00462c);
+  --bg2: linear-gradient(85deg, #35577d, #141e30);
+  --bg3: linear-gradient(85deg, #0B3037, #143e5e);
+  --bg4: #502d55;
+  --bg5: #935073;
+  --bg6: #f6dbc0;
+  --bg7: #f8f4e9;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #071c2c, #103b5c);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 900px;
+  height: 700px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .3);
+}
+
+.input {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.input input {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, .08);
+  color: white;
+  font-size: 16px;
+}
+
+.input input::placeholder {
+  color: rgba(255, 255, 255, .6);
+}
+/*
+.input button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 15px;
+  background: #00c3ff;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.input button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 195, 255, .4);
+}
+*/
+button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 15px;
+  background: #00c3ff;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  transition: .3s;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 195, 255, .4);
+}
+.Msg {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  margin: 10px 0;
+  width: fit-content;
+  max-width: 70%;
+  border-radius: 18px;
+  color: white;
+  animation: pop .3s ease;
+}
+
+.Msg img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.Msg:nth-child(odd) {
+  background: rgba(0, 195, 255, 0.2);
+}
+
+.Msg:nth-child(even) {
+  background: rgba(255, 255, 255, .08);
+  margin-left: auto;
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .box {
+    width: 95%;
+    height: 95vh;
+  }
+
+  .Msg {
+    max-width: 90%;
+  }
+}
